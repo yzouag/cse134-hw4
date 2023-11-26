@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wilson Zou's Personal Website, software engineer, blogs & more!">
+    <title>Wilson Zou's Personal Website</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <header id="header">
+        <section id="masthead">
+            <h2>Newbie for Tech</h2>
+            <p>Learning is a Life Long Journey</p>
+        </section>
+        <nav>
+            <ul>
+                <li class="menu_item"><picture><img src="resources/menu.png" alt=""/></picture></li>
+                <li class="menu_item"><a href="#header">Home</a></li>
+                <li class="menu_item"><a href="#work">Work</a></li>
+                <li class="menu_item"><a href="#project">Project</a></li>
+                <li class="menu_item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="title">
+        <h1>Wilson ZOU</h1>
+        <h2>Web Development, Java Programming and C++ Programming</h2>
+    </section>
+    
+    <main>
+        <aside>
+            <picture>
+                <source srcset="resources/bio_image.jpg" type="image/webp">
+                <source srcset="resources/bio_image.jpg" type="image/jpg">
+                <img src="resources/bio_image.jpg" alt="bio image">
+            </picture>
+            <h2>Wilson ZOU</h2>
+            <p>I'm currently a master student at <em>University of California San Diego</em> with a major in
+                <strong>Computer Science</strong>.
+                Prior to this, I graduated from the <em>Hong Kong University of Science and Technology</em> with a
+                Bachelor's degree in <strong>Computer Science Engineering</strong>. I worked as a software engineer in
+                Sensoride, Santa
+                Medial Technology and LORA technologies. Proficient in Python, C++, and Java, I always strive to apply
+                the latest techniques
+                and best practices in my projects.</p>
+        </aside>
+        <section id="work">
+            <h2>Work Experience</h2>
+            <article>
+                <h3>Sensoride Corporation</h3>
+                <p>Position: Software Engineering Internship</p>
+                <p>Time: June 2023 - September 2023</p>
+                <details open>
+                    <summary>Duties</summary>
+                    <ol>
+                        <li>Data Visualization of Radar Data with C++ QT: Construct a real time streaming plot for radar
+                            data using Point Cloud and Visualization Toolkit libraries. Apply clustering and signal
+                            processing algorithms to process data points.</li>
+                        <li>Communication for Radar Configuration over Network: Implement a Handshake Mechanism using
+                            UDP protocol to configure radar and receive real time streaming data.</li>
+                        <li>Multi-threading optimization for Heavy Computation: Optimize current code design with
+                            multi-threads techniques and maintain the consistency of streaming data with synchronization
+                            mechanisms.</li>
+                    </ol>
+                </details>
+            </article>
+
+            <article>
+                <h3>Santa Medical Technology</h3>
+                <p>Position: Software Developer Internship</p>
+                <p>Time: June 2022 - August 2022</p>
+                <details open>
+                    <summary>Duties</summary>
+                    <p>Use C++ QT, VTK and ITK to create interactive application for viewing CT images and adding
+                        markers, pedicle screws. Realize the function of showing the axial, sagittal, and coronal view
+                        of the body. Design the whole system in MVC framework, create real-time rendering and image
+                        slicing within short response time. Implement graphic interface widgets for convenient user
+                        interactions.</p>
+                </details>
+            </article>
+
+            <article>
+                <h3>AskLORA</h3>
+                <p>Position: Data Science Internship</p>
+                <p>Time: June 2021 - August 2021</p>
+                <details open>
+                    <summary>Duties</summary>
+                    <ol>
+                        <li>Use python and crawler framework to build a scraper for collecting financial posts, fully
+                            automate the process and deploy cloud storage to hold data.</li>
+                        <li>Use spaCy, regex, BERT models to extract critical sections in the posts. Analyze the text
+                            data to help with company's stock market research</li>
+                        <li>Build a search function using ElasticSearch, encapsulate it and add into company's launching
+                            app</li>
+                    </ol>
+                </details>
+            </article>
+        </section>
+
+        <section id="project">
+            <h2>Project & Research</h2>
+            <article>
+                <h3>Weakly Supervised Semantic Segmentation for Lung Adenocarcinoma</h3>
+                <p>Construct a complete weakly supervised learning pipeline including pre-processing, noise elimination,
+                    prediction and
+                    post processing, with innovative network model by Python and PyTorch framework. Reach
+                    state-of-the-art accuracy
+                    on testing dataset and publish the method to MICCAI 2022.</p>
+            </article>
+
+            <article>
+                <h3>Compiler Construction with Heap Allocation and Garbage Collection using Rust</h3>
+                <p>Implement a compiler for Lisp-style syntax with support of control flow and basic arithmetic
+                    operations. The compiler
+                    also supports heap allocated data and self defined data type, with garbage collection mechanism to
+                    remove unused
+                    data in memory.</p>
+                <p>here is an tiny example program:</p>
+                <pre><code>
+(fun (range n m)
+    (if (= n m) (vec n nil) (vec n (range (add1 n) m))))                  
+(fun (printall list) (loop
+    (if (= list nil) (break nil) (block
+        (print (vec-get list 0))
+        (set! list (vec-get list 1))
+    ))))  
+(let ((list (range 1 5)))
+    (printall (append list (reverse list))))</code></pre>
+            </article>
+
+            <article>
+                <h3>Ticket Sales Web Application by React and Nodejs</h3>
+                <p>Build a full stack application using TypeScript, Express framework as back-end and React as
+                    front-end. Create a
+                    complicated application with authentication, database lookup and other features. Integrates with
+                    Docker, Kubernates,
+                    Skaffold to automate the application deployment and resource scaling.</p>
+            </article>
+        </section>
+    </main>
+
+    <section id="contact">
+        <h2>Contact Me!</h2>
+        <p>feel free to get in touch with me by submitting the form below and I will get back to you as soon as possible!</p>
+        <form>
+            <fieldset>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name">    
+            </fieldset>
+            <fieldset>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Enter your email">
+            </fieldset>
+            <fieldset>
+                <label for="role">Role</label>
+                <select id="role">
+                    <optgroup label="individual">
+                        <option value="developer">Developer</option>
+                        <option value="designer">Designer</option>
+                        <option value="student">Student</option>
+                    </optgroup>
+                    <optgroup label="company">
+                        <option value="recruiter">Recruiter</option>
+                        <option value="">Recruiter</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+            <fieldset id="form-message">
+                <label for="message">message</label>
+                <textarea id="message" name="message">Please tell me your thoughts here!</textarea>
+            </fieldset>
+            <button type="submit">send</button>
+        </form>
+    </section>
+    
+    <footer>
+        <section>
+            <h2>Social Media</h2>
+            <ul>
+                <li><a href="https://github.com/yzouag">GitHub</a></li>
+                <li><a href="mailto:3310189877@qq.com">email</a></li>
+                <li><a href="https://www.linkedin.com/in/yiwen-wilson-zou-823198245/">LinkedIn</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>General</h2>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#project">projects</a></li>
+                <li><a href="#work">experience</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>External Links</h2>
+            <ul>
+                <li><a href="">resume</a></li>
+                <li><a href="">old website</a></li>
+            </ul>
+        </section>
+        <p>&copy; 2024 Yiwen ZOU. <i>UCSD CSE 134B homework</i></p>
+    </footer>
+</body>
+
+</html>

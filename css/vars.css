@@ -1,0 +1,13 @@
+:root {
+	--background-color: #252a34;
+	--text-color: #eee;
+	--heading-color: #51555d;
+	--footer-color: #1a1d24;
+	--h1-size: 6vw;
+	--h2-size: 2.5vw;
+	--link-color: #a9dde0;
+	--button-color: #38aeb5;
+	--subheading-size: 1.5em;
+	--body-size: 1.25em;
+	--font: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif
+}
