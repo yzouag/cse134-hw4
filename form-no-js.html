@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Wilson Zou's Personal Website, software engineer, blogs & more!">
     <title>Wilson Zou's Personal Website</title>
-    <link rel="stylesheet" href="css/home.css">
-    <script src="scripts/contact-form.js"></script>
-    <script src="scripts/day-night-mode.js"></script>
+    <link rel="stylesheet" href="css/form-no-js.css">
 </head>
 
 <body>
@@ -26,8 +24,6 @@
                 <li class="menu_item"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <input type="checkbox" id="dark-mode-toggle">
-        <label for="dark-mode-toggle" id="label-toggle"></label>
     </header>
 
     <section id="title">
@@ -43,29 +39,28 @@
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" placeholder="Enter your name" pattern="^[A-Za-z ]+$" required>
                 <div class="output-container">
-                    <output for="name" id="nameError" class="error">name is not valid</output>
-                    <output for="name" id="nameInfo" class="info">valid</output>
+                    <output for="name" id="nameError">name is not valid</output>
+                    <output for="name" id="nameInfo">valid</output>
                 </div>
             </fieldset>
             <fieldset>
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="Enter your email" required>
                 <div class="output-container">
-                    <output for="email" id="emailError" class="error">email is invalid</output>
-                    <output for="email" id="emailInfo" class="info">valid</output>
+                    <output for="email" id="emailError">email is invalid</output>
+                    <output for="email" id="emailInfo">valid</output>
                 </div>
             </fieldset>
             <fieldset id="form-message">
                 <label for="message">message</label>
                 <textarea id="message" name="message" maxlength="500" minlength="10" required>Please tell me your thoughts here!</textarea>
                 <div class="output-container">
-                    <output for="message" id="messageError" class="error">message too short or too long</output>
-                    <output for="message" id="messageInfo" class="info">valid</output>
+                    <output for="message" id="messageError">message too short or too long</output>
+                    <output for="message" id="messageInfo">valid</output>
                 </div>
             </fieldset>
             <input type="hidden" name="possible_bot" value="true">
-            <input type="hidden" name="form-errors" id="form-errors">
-            <button type="submit" id="form-button">send</button>
+            <button type="submit">send</button>
         </form>
     </section>
 

@@ -85,49 +85,6 @@ nav ul {
     }
 }
 
-#label-toggle {
-    width: 5rem;
-    height: 2rem;
-    position: relative;
-    display: block;
-    background: var(--text-color);
-    border-radius: 2rem;
-    box-shadow: inset 0rem 0.05rem 0.15rem rgba(0,0,0,0.4), inset 0rem -0.05rem -0.15rem rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-}
-
-#label-toggle::after {
-    content: "";
-    width: 1.8rem;
-    height: 1.8rem;
-    position: absolute;
-    top: 0.1rem;
-    left: 0.1rem;
-    background: linear-gradient(180deg, #ffcc89, #d8860b);
-    border-radius: 1.8rem;
-    box-shadow: 0rem 0.05rem 0.1rem rgba(0,0,0,0.2);
-}
-
-#dark-mode-toggle {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-}
-
-#dark-mode-toggle:checked + #label-toggle {
-    background: #242424;
-}
-
-#dark-mode-toggle:checked + #label-toggle::after {
-    left: 4.9rem;
-    transform: translateX(-100%);
-    background: linear-gradient(180deg, #777, var(--background-color));
-}
-
-#label-toggle, #label-toggle::after {
-    transition: 0.3s;
-}
-
 #title {
     background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .45)), -webkit-image-set(url("../resources/landing.webp"),
             url("../resources/landing.jpg")) 50% no-repeat;
@@ -140,14 +97,12 @@ nav ul {
 
     &>h1 {
         font-size: var(--h1-size);
-        color: aliceblue;
         text-shadow: 0.2vw 0.1vw 0.8vw rgba(0, 0, 0, 1);
         animation: fadeUp 0.8s ease forwards;
     }
-    
+
     &>h2 {
         font-size: var(--h2-size);
-        color: aliceblue;
         text-shadow: 0.2vw 0.1vw 0.8vw rgba(0, 0, 0, 1);
         animation: fadeUp 1.5s ease forwards;
     }
@@ -200,7 +155,7 @@ main section h3 {
 }
 
 section:has(form) {
-    background: linear-gradient(var(--mask-color-from), var(--mask-color-to)), -webkit-image-set(url("../resources/contact_background.webp"),
+    background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .55)), -webkit-image-set(url("../resources/contact_background.webp"),
             url("../resources/contact_background.jpg")) 50% no-repeat;
     background-size: cover;
     height: 40rem;
@@ -234,6 +189,10 @@ form {
         & input {
             background: color(display-p3 0 0 0 / 0.3);
         }
+
+        /* & select {
+            background: color(display-p3 0 0 0 / 0.3);
+        } */
     }
 
     &>button {
@@ -271,33 +230,22 @@ form {
     }
 }
 
-.output-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.output-container output {
+    display: none;
 }
 
-.error {
+input:invalid + .output-container output#nameError,
+input:invalid + .output-container output#emailError,
+textarea:invalid + .output-container output#messageError {
+    display: block;
     color: red;
-    opacity: 0;
 }
 
-.error.active {
-    animation: fadeOut 3s forwards;
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;;
-    }
-}
-
-.info {
+input:valid + .output-container output#nameInfo,
+input:valid + .output-container output#emailInfo,
+textarea:valid + .output-container output#messageInfo {
+    display: block;
     color: green;
-    opacity: 0;
 }
 
 footer {

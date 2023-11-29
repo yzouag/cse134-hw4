@@ -7,6 +7,8 @@
 	--h2-size: 2.5vw;
 	--link-color: #a9dde0;
 	--button-color: #38aeb5;
+	--mask-color-from: rgba(0, 0, 0, .45);
+	--mask-color-to: rgba(0, 0, 0, .55);
 	--subheading-size: 1.5em;
 	--body-size: 1.25em;
 	--font: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif
